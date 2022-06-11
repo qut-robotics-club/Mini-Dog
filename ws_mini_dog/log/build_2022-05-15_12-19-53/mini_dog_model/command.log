@@ -1,0 +1,6 @@
+Invoking command in '/home/cameron/ws_mini_dog/build/mini_dog_model': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/cameron/ws_mini_dog/src/mini_dog_model -DCMAKE_INSTALL_PREFIX=/home/cameron/ws_mini_dog/install/mini_dog_model
+Invoked command in '/home/cameron/ws_mini_dog/build/mini_dog_model' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake /home/cameron/ws_mini_dog/src/mini_dog_model -DCMAKE_INSTALL_PREFIX=/home/cameron/ws_mini_dog/install/mini_dog_model
+Invoking command in '/home/cameron/ws_mini_dog/build/mini_dog_model': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/cameron/ws_mini_dog/build/mini_dog_model -- -j8 -l8
+Invoked command in '/home/cameron/ws_mini_dog/build/mini_dog_model' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/cameron/ws_mini_dog/build/mini_dog_model -- -j8 -l8
+Invoking command in '/home/cameron/ws_mini_dog/build/mini_dog_model': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/cameron/ws_mini_dog/build/mini_dog_model
+Invoked command in '/home/cameron/ws_mini_dog/build/mini_dog_model' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --install /home/cameron/ws_mini_dog/build/mini_dog_model

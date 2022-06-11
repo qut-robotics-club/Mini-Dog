@@ -1,0 +1,2 @@
+Invoking command in '/home/cameron/Mini-Dog/ws_mini_dog/build/mini_dog_model': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/cameron/Mini-Dog/ws_mini_dog/build/mini_dog_model -- -j8 -l8
+Invoked command in '/home/cameron/Mini-Dog/ws_mini_dog/build/mini_dog_model' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/cameron/Mini-Dog/ws_mini_dog/build/mini_dog_model -- -j8 -l8

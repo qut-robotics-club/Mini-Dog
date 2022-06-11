@@ -1,0 +1,15 @@
+package.xml
+setup.cfg
+setup.py
+../../build/mini_dog_model/mini_dog_model.egg-info/PKG-INFO
+../../build/mini_dog_model/mini_dog_model.egg-info/SOURCES.txt
+../../build/mini_dog_model/mini_dog_model.egg-info/dependency_links.txt
+../../build/mini_dog_model/mini_dog_model.egg-info/entry_points.txt
+../../build/mini_dog_model/mini_dog_model.egg-info/requires.txt
+../../build/mini_dog_model/mini_dog_model.egg-info/top_level.txt
+../../build/mini_dog_model/mini_dog_model.egg-info/zip-safe
+mini_dog_model/__init__.py
+resource/mini_dog_model
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

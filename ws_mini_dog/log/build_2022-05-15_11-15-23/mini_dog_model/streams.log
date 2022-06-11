@@ -1,0 +1,20 @@
+[0.988s] Invoking command in '/home/cameron/ws_mini_dog/src/mini_dog_model': PYTHONPATH=/home/cameron/ws_mini_dog/install/mini_dog_model/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/mini_dog_model build --build-base /home/cameron/ws_mini_dog/build/mini_dog_model/build install --prefix /home/cameron/ws_mini_dog/install/mini_dog_model --record /home/cameron/ws_mini_dog/build/mini_dog_model/install.log --single-version-externally-managed
+[1.371s] running egg_info
+[1.372s] writing ../../build/mini_dog_model/mini_dog_model.egg-info/PKG-INFO
+[1.373s] writing dependency_links to ../../build/mini_dog_model/mini_dog_model.egg-info/dependency_links.txt
+[1.373s] writing entry points to ../../build/mini_dog_model/mini_dog_model.egg-info/entry_points.txt
+[1.374s] writing requirements to ../../build/mini_dog_model/mini_dog_model.egg-info/requires.txt
+[1.374s] writing top-level names to ../../build/mini_dog_model/mini_dog_model.egg-info/top_level.txt
+[1.415s] reading manifest file '../../build/mini_dog_model/mini_dog_model.egg-info/SOURCES.txt'
+[1.416s] writing manifest file '../../build/mini_dog_model/mini_dog_model.egg-info/SOURCES.txt'
+[1.416s] running build
+[1.416s] running build_py
+[1.416s] running install
+[1.417s] running install_lib
+[1.419s] running install_data
+[1.420s] running install_egg_info
+[1.422s] removing '/home/cameron/ws_mini_dog/install/mini_dog_model/lib/python3.8/site-packages/mini_dog_model-0.0.0-py3.8.egg-info' (and everything under it)
+[1.422s] Copying ../../build/mini_dog_model/mini_dog_model.egg-info to /home/cameron/ws_mini_dog/install/mini_dog_model/lib/python3.8/site-packages/mini_dog_model-0.0.0-py3.8.egg-info
+[1.424s] running install_scripts
+[1.447s] writing list of installed files to '/home/cameron/ws_mini_dog/build/mini_dog_model/install.log'
+[1.489s] Invoked command in '/home/cameron/ws_mini_dog/src/mini_dog_model' returned '0': PYTHONPATH=/home/cameron/ws_mini_dog/install/mini_dog_model/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/mini_dog_model build --build-base /home/cameron/ws_mini_dog/build/mini_dog_model/build install --prefix /home/cameron/ws_mini_dog/install/mini_dog_model --record /home/cameron/ws_mini_dog/build/mini_dog_model/install.log --single-version-externally-managed

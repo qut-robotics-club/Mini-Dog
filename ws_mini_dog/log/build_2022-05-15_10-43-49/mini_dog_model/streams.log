@@ -1,0 +1,33 @@
+[1.912s] Invoking command in '/home/cameron/ws_mini_dog/src/mini_dog_model': PYTHONPATH=/home/cameron/ws_mini_dog/install/mini_dog_model/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/mini_dog_model build --build-base /home/cameron/ws_mini_dog/build/mini_dog_model/build install --prefix /home/cameron/ws_mini_dog/install/mini_dog_model --record /home/cameron/ws_mini_dog/build/mini_dog_model/install.log --single-version-externally-managed
+[2.252s] running egg_info
+[2.253s] creating ../../build/mini_dog_model/mini_dog_model.egg-info
+[2.253s] writing ../../build/mini_dog_model/mini_dog_model.egg-info/PKG-INFO
+[2.253s] writing dependency_links to ../../build/mini_dog_model/mini_dog_model.egg-info/dependency_links.txt
+[2.254s] writing entry points to ../../build/mini_dog_model/mini_dog_model.egg-info/entry_points.txt
+[2.254s] writing requirements to ../../build/mini_dog_model/mini_dog_model.egg-info/requires.txt
+[2.254s] writing top-level names to ../../build/mini_dog_model/mini_dog_model.egg-info/top_level.txt
+[2.319s] writing manifest file '../../build/mini_dog_model/mini_dog_model.egg-info/SOURCES.txt'
+[2.362s] reading manifest file '../../build/mini_dog_model/mini_dog_model.egg-info/SOURCES.txt'
+[2.362s] writing manifest file '../../build/mini_dog_model/mini_dog_model.egg-info/SOURCES.txt'
+[2.362s] running build
+[2.362s] running build_py
+[2.363s] creating /home/cameron/ws_mini_dog/build/mini_dog_model/build
+[2.363s] creating /home/cameron/ws_mini_dog/build/mini_dog_model/build/lib
+[2.363s] creating /home/cameron/ws_mini_dog/build/mini_dog_model/build/lib/mini_dog_model
+[2.461s] copying mini_dog_model/__init__.py -> /home/cameron/ws_mini_dog/build/mini_dog_model/build/lib/mini_dog_model
+[2.462s] running install
+[2.463s] running install_lib
+[2.464s] creating /home/cameron/ws_mini_dog/install/mini_dog_model/lib/python3.8/site-packages/mini_dog_model
+[2.464s] copying /home/cameron/ws_mini_dog/build/mini_dog_model/build/lib/mini_dog_model/__init__.py -> /home/cameron/ws_mini_dog/install/mini_dog_model/lib/python3.8/site-packages/mini_dog_model
+[2.465s] byte-compiling /home/cameron/ws_mini_dog/install/mini_dog_model/lib/python3.8/site-packages/mini_dog_model/__init__.py to __init__.cpython-38.pyc
+[2.467s] running install_data
+[2.467s] creating /home/cameron/ws_mini_dog/install/mini_dog_model/share/ament_index
+[2.468s] creating /home/cameron/ws_mini_dog/install/mini_dog_model/share/ament_index/resource_index
+[2.468s] creating /home/cameron/ws_mini_dog/install/mini_dog_model/share/ament_index/resource_index/packages
+[2.468s] copying resource/mini_dog_model -> /home/cameron/ws_mini_dog/install/mini_dog_model/share/ament_index/resource_index/packages
+[2.468s] copying package.xml -> /home/cameron/ws_mini_dog/install/mini_dog_model/share/mini_dog_model
+[2.468s] running install_egg_info
+[2.470s] Copying ../../build/mini_dog_model/mini_dog_model.egg-info to /home/cameron/ws_mini_dog/install/mini_dog_model/lib/python3.8/site-packages/mini_dog_model-0.0.0-py3.8.egg-info
+[2.471s] running install_scripts
+[2.495s] writing list of installed files to '/home/cameron/ws_mini_dog/build/mini_dog_model/install.log'
+[2.531s] Invoked command in '/home/cameron/ws_mini_dog/src/mini_dog_model' returned '0': PYTHONPATH=/home/cameron/ws_mini_dog/install/mini_dog_model/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/mini_dog_model build --build-base /home/cameron/ws_mini_dog/build/mini_dog_model/build install --prefix /home/cameron/ws_mini_dog/install/mini_dog_model --record /home/cameron/ws_mini_dog/build/mini_dog_model/install.log --single-version-externally-managed
