@@ -1,0 +1,641 @@
+<sdf version='1.7'>
+  <model name='Mini_Dog'>
+    <link name='body'>
+      <inertial>
+        <pose>-0.054576 1.06725 1.97126 0 -0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>649.843</ixx>
+          <ixy>3.74627</ixy>
+          <ixz>-0.943389</ixz>
+          <iyy>87.6611</iyy>
+          <iyz>-45.7908</iyz>
+          <izz>638.731</izz>
+        </inertia>
+      </inertial>
+      <collision name='body_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_body.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='body_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_body.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='body_to_back_left_coax' type='revolute'>
+      <pose relative_to='body'>1.40381 4.23649 2.46922 0 -0 0</pose>
+      <parent>body</parent>
+      <child>back_left_coax</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.2</lower>
+          <upper>-0.3</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='back_left_coax'>
+      <pose relative_to='body_to_back_left_coax'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.193711 0.842311 -0.354898 0 -0 0</pose>
+        <mass>0.1346</mass>
+        <inertia>
+          <ixx>1.18493</ixx>
+          <ixy>-0.016425</ixy>
+          <ixz>0.006891</ixz>
+          <iyy>1.03687</iyy>
+          <iyz>-0.016425</iyz>
+          <izz>0.835549</izz>
+        </inertia>
+      </inertial>
+      <collision name='back_left_coax_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_left_coax.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='back_left_coax_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_left_coax.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='back_left_coax_to_back_left_femur' type='revolute'>
+      <pose relative_to='back_left_coax'>1.03787 0.879656 -0.351362 0 -0 0</pose>
+      <parent>back_left_coax</parent>
+      <child>back_left_femur</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='back_left_femur'>
+      <pose relative_to='back_left_coax_to_back_left_femur'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>1.05612 1.26231 -1.12718 0 -0 0</pose>
+        <mass>0.18113</mass>
+        <inertia>
+          <ixx>10.0725</ixx>
+          <ixy>-0.529121</ixy>
+          <ixz>0.516703</ixz>
+          <iyy>6.45075</iyy>
+          <iyz>4.60448</iyz>
+          <izz>7.59445</izz>
+        </inertia>
+      </inertial>
+      <collision name='back_left_femur_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_left_femur.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='back_left_femur_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_left_femur.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='back_left_femur_to_back_left_tibia' type='revolute'>
+      <pose relative_to='back_left_femur'>0.393541 2.65 -2.78072 0 -0 0</pose>
+      <parent>back_left_femur</parent>
+      <child>back_left_tibia</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1.25</lower>
+          <upper>2.5</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='back_left_tibia'>
+      <pose relative_to='back_left_femur_to_back_left_tibia'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.825393 -0.56948 -1.21749 0 -0 0</pose>
+        <mass>0.14388</mass>
+        <inertia>
+          <ixx>8.69249</ixx>
+          <ixy>-0.024831</ixy>
+          <ixz>0.021666</ixz>
+          <iyy>7.09355</iyy>
+          <iyz>-3.14337</iyz>
+          <izz>2.4539</izz>
+        </inertia>
+      </inertial>
+      <collision name='back_left_tibia_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_left_tibia.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='back_left_tibia_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_left_tibia.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='body_to_back_right_coax' type='revolute'>
+      <pose relative_to='body'>-1.40381 4.23649 2.46922 0 -0 0</pose>
+      <parent>body</parent>
+      <child>back_right_coax</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-1.2</lower>
+          <upper>-0.3</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='back_right_coax'>
+      <pose relative_to='body_to_back_right_coax'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.193711 0.842311 -0.354898 0 -0 0</pose>
+        <mass>0.1346</mass>
+        <inertia>
+          <ixx>1.18493</ixx>
+          <ixy>0.016425</ixy>
+          <ixz>-0.006891</ixz>
+          <iyy>1.03687</iyy>
+          <iyz>-0.016425</iyz>
+          <izz>0.835549</izz>
+        </inertia>
+      </inertial>
+      <collision name='back_right_coax_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_right_coax.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='back_right_coax_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_right_coax.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='back_right_coax_to_back_right_femur' type='revolute'>
+      <pose relative_to='back_right_coax'>-1.03787 0.879656 -0.351362 0 -0 0</pose>
+      <parent>back_right_coax</parent>
+      <child>back_right_femur</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='back_right_femur'>
+      <pose relative_to='back_right_coax_to_back_right_femur'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-1.05612 1.26231 -1.12718 0 -0 0</pose>
+        <mass>0.18113</mass>
+        <inertia>
+          <ixx>10.0725</ixx>
+          <ixy>0.529121</ixy>
+          <ixz>-0.516703</ixz>
+          <iyy>6.45075</iyy>
+          <iyz>4.60448</iyz>
+          <izz>7.59445</izz>
+        </inertia>
+      </inertial>
+      <collision name='back_right_femur_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_right_femur.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='back_right_femur_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_right_femur.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='back_right_femur_to_back_right_tibia' type='revolute'>
+      <pose relative_to='back_right_femur'>-0.393541 2.65 -2.78072 0 -0 0</pose>
+      <parent>back_right_femur</parent>
+      <child>back_right_tibia</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-1.25</lower>
+          <upper>2.5</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='back_right_tibia'>
+      <pose relative_to='back_right_femur_to_back_right_tibia'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.825393 -0.56948 -1.21749 0 -0 0</pose>
+        <mass>0.14388</mass>
+        <inertia>
+          <ixx>8.69249</ixx>
+          <ixy>0.024831</ixy>
+          <ixz>-0.021666</ixz>
+          <iyy>7.09355</iyy>
+          <iyz>-3.14337</iyz>
+          <izz>2.4539</izz>
+        </inertia>
+      </inertial>
+      <collision name='back_right_tibia_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_right_tibia.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='back_right_tibia_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_right_tibia.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='body_to_front_left_coax' type='revolute'>
+      <pose relative_to='body'>1.40381 -5.8583 2.46922 0 -0 0</pose>
+      <parent>body</parent>
+      <child>front_left_coax</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-1.2</lower>
+          <upper>-0.3</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='front_left_coax'>
+      <pose relative_to='body_to_front_left_coax'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.193711 0.842311 -0.354898 0 -0 0</pose>
+        <mass>0.1346</mass>
+        <inertia>
+          <ixx>1.18493</ixx>
+          <ixy>-0.016425</ixy>
+          <ixz>0.006891</ixz>
+          <iyy>1.03687</iyy>
+          <iyz>-0.016425</iyz>
+          <izz>0.835549</izz>
+        </inertia>
+      </inertial>
+      <collision name='front_left_coax_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_left_coax.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='front_left_coax_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_left_coax.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='front_left_coax_to_front_left_femur' type='revolute'>
+      <pose relative_to='front_left_coax'>1.03787 0.879656 -0.351362 0 -0 0</pose>
+      <parent>front_left_coax</parent>
+      <child>front_left_femur</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='front_left_femur'>
+      <pose relative_to='front_left_coax_to_front_left_femur'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>1.05612 1.26231 -1.12718 0 -0 0</pose>
+        <mass>0.18113</mass>
+        <inertia>
+          <ixx>10.0725</ixx>
+          <ixy>-0.529121</ixy>
+          <ixz>0.516703</ixz>
+          <iyy>6.45075</iyy>
+          <iyz>4.60448</iyz>
+          <izz>7.59445</izz>
+        </inertia>
+      </inertial>
+      <collision name='front_left_femur_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_left_femur.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='front_left_femur_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_left_femur.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='front_left_femur_to_front_left_tibia' type='revolute'>
+      <pose relative_to='front_left_femur'>0.393541 2.65 -2.78072 0 -0 0</pose>
+      <parent>front_left_femur</parent>
+      <child>front_left_tibia</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-1.25</lower>
+          <upper>2.5</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='front_left_tibia'>
+      <pose relative_to='front_left_femur_to_front_left_tibia'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.825393 -0.56948 -1.21749 0 -0 0</pose>
+        <mass>0.14388</mass>
+        <inertia>
+          <ixx>8.69249</ixx>
+          <ixy>-0.024831</ixy>
+          <ixz>0.021666</ixz>
+          <iyy>7.09355</iyy>
+          <iyz>-3.14337</iyz>
+          <izz>2.4539</izz>
+        </inertia>
+      </inertial>
+      <collision name='front_left_tibia_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_left_tibia.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='front_left_tibia_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_left_tibia.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='body_to_front_right_coax' type='revolute'>
+      <pose relative_to='body'>-1.40381 -5.8583 2.46922 0 -0 0</pose>
+      <parent>body</parent>
+      <child>front_right_coax</child>
+      <axis>
+        <xyz>0 -1 0</xyz>
+        <limit>
+          <lower>-1.2</lower>
+          <upper>-0.3</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='front_right_coax'>
+      <pose relative_to='body_to_front_right_coax'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.193711 0.842311 -0.354898 0 -0 0</pose>
+        <mass>0.1346</mass>
+        <inertia>
+          <ixx>1.18493</ixx>
+          <ixy>0.016425</ixy>
+          <ixz>-0.006891</ixz>
+          <iyy>1.03687</iyy>
+          <iyz>-0.016425</iyz>
+          <izz>0.835549</izz>
+        </inertia>
+      </inertial>
+      <collision name='front_right_coax_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_right_coax.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='front_right_coax_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_right_coax.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='front_right_coax_to_front_right_femur' type='revolute'>
+      <pose relative_to='front_right_coax'>-1.03787 0.879656 -0.351362 0 -0 0</pose>
+      <parent>front_right_coax</parent>
+      <child>front_right_femur</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='front_right_femur'>
+      <pose relative_to='front_right_coax_to_front_right_femur'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-1.05612 1.26231 -1.12718 0 -0 0</pose>
+        <mass>0.18113</mass>
+        <inertia>
+          <ixx>10.0725</ixx>
+          <ixy>0.529121</ixy>
+          <ixz>-0.516703</ixz>
+          <iyy>6.45075</iyy>
+          <iyz>4.60448</iyz>
+          <izz>7.59445</izz>
+        </inertia>
+      </inertial>
+      <collision name='front_right_femur_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_right_femur.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='front_right_femur_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_right_femur.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='front_right_femur_to_front_right_tibia' type='revolute'>
+      <pose relative_to='front_right_femur'>-0.393541 2.65 -2.78072 0 -0 0</pose>
+      <parent>front_right_femur</parent>
+      <child>front_right_tibia</child>
+      <axis>
+        <xyz>-1 0 0</xyz>
+        <limit>
+          <lower>-1.25</lower>
+          <upper>2.5</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='front_right_tibia'>
+      <pose relative_to='front_right_femur_to_front_right_tibia'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.825393 -0.56948 -1.21749 0 -0 0</pose>
+        <mass>0.14388</mass>
+        <inertia>
+          <ixx>8.69249</ixx>
+          <ixy>0.024831</ixy>
+          <ixz>-0.021666</ixz>
+          <iyy>7.09355</iyy>
+          <iyz>-3.14337</iyz>
+          <izz>2.4539</izz>
+        </inertia>
+      </inertial>
+      <collision name='front_right_tibia_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_right_tibia.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='front_right_tibia_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>../../meshes/collision/NOVA_SM3_low_res_right_tibia.stl</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>
+[1;36m[0m[1;32m[0m

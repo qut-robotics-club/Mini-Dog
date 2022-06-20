@@ -1,0 +1,4 @@
+CMake Error: The current CMakeCache.txt directory /home/cameron/Mini-Dog/ws_mini_dog/build/mini_dog_model/CMakeCache.txt is different than the directory /home/cameron/ws_mini_dog/build/mini_dog_model where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+CMake Error: The source directory "/home/cameron/ws_mini_dog/src/mini_dog_model" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+make: *** [Makefile:222: cmake_check_build_system] Error 1

@@ -1,0 +1,31 @@
+running egg_info
+creating ../../build/mini_dog_model/mini_dog_model.egg-info
+writing ../../build/mini_dog_model/mini_dog_model.egg-info/PKG-INFO
+writing dependency_links to ../../build/mini_dog_model/mini_dog_model.egg-info/dependency_links.txt
+writing entry points to ../../build/mini_dog_model/mini_dog_model.egg-info/entry_points.txt
+writing requirements to ../../build/mini_dog_model/mini_dog_model.egg-info/requires.txt
+writing top-level names to ../../build/mini_dog_model/mini_dog_model.egg-info/top_level.txt
+writing manifest file '../../build/mini_dog_model/mini_dog_model.egg-info/SOURCES.txt'
+reading manifest file '../../build/mini_dog_model/mini_dog_model.egg-info/SOURCES.txt'
+writing manifest file '../../build/mini_dog_model/mini_dog_model.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/cameron/ws_mini_dog/build/mini_dog_model/build
+creating /home/cameron/ws_mini_dog/build/mini_dog_model/build/lib
+creating /home/cameron/ws_mini_dog/build/mini_dog_model/build/lib/mini_dog_model
+copying mini_dog_model/__init__.py -> /home/cameron/ws_mini_dog/build/mini_dog_model/build/lib/mini_dog_model
+running install
+running install_lib
+creating /home/cameron/ws_mini_dog/install/mini_dog_model/lib/python3.8/site-packages/mini_dog_model
+copying /home/cameron/ws_mini_dog/build/mini_dog_model/build/lib/mini_dog_model/__init__.py -> /home/cameron/ws_mini_dog/install/mini_dog_model/lib/python3.8/site-packages/mini_dog_model
+byte-compiling /home/cameron/ws_mini_dog/install/mini_dog_model/lib/python3.8/site-packages/mini_dog_model/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /home/cameron/ws_mini_dog/install/mini_dog_model/share/ament_index
+creating /home/cameron/ws_mini_dog/install/mini_dog_model/share/ament_index/resource_index
+creating /home/cameron/ws_mini_dog/install/mini_dog_model/share/ament_index/resource_index/packages
+copying resource/mini_dog_model -> /home/cameron/ws_mini_dog/install/mini_dog_model/share/ament_index/resource_index/packages
+copying package.xml -> /home/cameron/ws_mini_dog/install/mini_dog_model/share/mini_dog_model
+running install_egg_info
+Copying ../../build/mini_dog_model/mini_dog_model.egg-info to /home/cameron/ws_mini_dog/install/mini_dog_model/lib/python3.8/site-packages/mini_dog_model-0.0.0-py3.8.egg-info
+running install_scripts
+writing list of installed files to '/home/cameron/ws_mini_dog/build/mini_dog_model/install.log'

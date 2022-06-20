@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="Mini_Dog">
+
+  <material name="blue">
+    <color rgba="0 0 0.8 1"/>
+  </material>
+  <material name="white">
+    <color rgba="1 1 1 1"/>
+  </material>
+
+  <xacro:property name="coax_x_offset" value="1.40380628885496" />
+  <xacro:property name="coax_front_y_offset" value="-5.85830014656488" />
+  <xacro:property name="coax_back_y_offset" value="4.23649066259542" />
+  <xacro:property name="coax_z_offset" value="2.46921476091603" />
+
+  <xacro:property name="femur_x_offset" value="1.03787235419847" />
+  <xacro:property name="femur_y_offset" value="0.879655749618321" />
+  <xacro:property name="femur_z_offset" value="-0.35136229251909" />
+
+  <xacro:property name="tibia_x_offset" value="0.39354148213741" />
+  <xacro:property name="tibia_y_offset" value="2.65000312488549" />
+  <xacro:property name="tibia_z_offset" value="-2.78071932641221" />
+
+  <link name="body">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="../../meshes/collision/NOVA_SM3_low_res_body.stl"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="../../meshes/collision/NOVA_SM3_low_res_body.stl"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="1"/>
+      <origin rpy="0 0 0" xyz="-0.054576	1.067253	1.971264"/>
+      <inertia ixx="649.842896" ixy="3.746272" ixz="-0.943389" iyy="87.661118" iyz="-45.790798" izz="638.730896"/>
+    </inertial>
+  </link>
+
+  <xacro:macro name="leg" params="prefix_y reflect_y coax_offset_y prefix_x reflect_x">
+
+    <joint name="body_to_${prefix_y}_${prefix_x}_coax" type="revolute">
+      <parent link="body"/>
+      <child link="${prefix_y}_${prefix_x}_coax"/>
+      <origin xyz="${coax_x_offset*reflect_x} ${coax_offset_y}	${coax_z_offset}"/>
+      <axis xyz="0 ${reflect_x*1} 0"/>
+      <limit lower="-1.2" upper="-0.3" effort="100" velocity="100"/>
+    </joint>
+
+    <link name="${prefix_y}_${prefix_x}_coax">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="../../meshes/collision/NOVA_SM3_low_res_${prefix_x}_coax.stl"/>
+        </geometry>
+        <material name="white"/>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="../../meshes/collision/NOVA_SM3_low_res_${prefix_x}_coax.stl"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="0.1346"/>
+        <origin rpy="0 0 0" xyz="${0.193711*reflect_x}	0.842311	-0.354898"/>
+        <inertia ixx="1.184929" ixy="${-0.016425*reflect_x}" ixz="${0.006891*reflect_x}" iyy="1.036875" iyz="-0.016425" izz="0.835549"/>
+      </inertial>
+    </link>
+
+    <joint name="${prefix_y}_${prefix_x}_coax_to_${prefix_y}_${prefix_x}_femur" type="continuous">
+      <parent link="${prefix_y}_${prefix_x}_coax"/>
+      <child link="${prefix_y}_${prefix_x}_femur"/>
+      <origin xyz="${femur_x_offset*reflect_x}	${femur_y_offset}	${femur_z_offset}"/>
+      <axis xyz="${reflect_x*1} 0 0"/>
+    </joint>
+
+    <link name="${prefix_y}_${prefix_x}_femur">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="../../meshes/collision/NOVA_SM3_low_res_${prefix_x}_femur.stl"/>
+        </geometry>
+        <material name="blue"/>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="../../meshes/collision/NOVA_SM3_low_res_${prefix_x}_femur.stl"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="0.18113"/>
+        <origin rpy="0 0 0" xyz="${1.056116*reflect_x}	1.262314	-1.127179"/>
+        <inertia ixx="10.072502" ixy="${-0.529121*reflect_x}" ixz="${0.516703*reflect_x}" iyy="6.450747" iyz="4.604481" izz="7.59445"/>
+      </inertial>
+    </link>
+
+    <joint name="${prefix_y}_${prefix_x}_femur_to_${prefix_y}_${prefix_x}_tibia" type="revolute">
+      <parent link="${prefix_y}_${prefix_x}_femur"/>
+      <child link="${prefix_y}_${prefix_x}_tibia"/>
+      <origin xyz="${tibia_x_offset*reflect_x}	${tibia_y_offset}	${tibia_z_offset}"/>
+      <axis xyz="${reflect_x*1} 0 0"/>
+      <limit lower="-1.25" upper="2.5" effort="100" velocity="100"/>
+    </joint>
+
+    <link name="${prefix_y}_${prefix_x}_tibia">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="../../meshes/collision/NOVA_SM3_low_res_${prefix_x}_tibia.stl"/>
+        </geometry>
+        <material name="white"/>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="../../meshes/collision/NOVA_SM3_low_res_${prefix_x}_tibia.stl"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <mass value="0.14388"/>
+        <origin rpy="0 0 0" xyz="${0.825393*reflect_x}	-0.56948	-1.21749"/>
+        <inertia ixx="8.692493" ixy="${-0.024831*reflect_x}" ixz="${0.021666*reflect_x}" iyy="7.093554" iyz="-3.143373" izz="2.453905"/>
+      </inertial>
+    </link>
+  </xacro:macro>
+
+  <xacro:leg prefix_y="front" reflect_y="1" coax_offset_y="${coax_front_y_offset}" prefix_x="left" reflect_x="1"/>
+  <xacro:leg prefix_y="front" reflect_y="1" coax_offset_y="${coax_front_y_offset}" prefix_x="right" reflect_x="-1"/>
+  <xacro:leg prefix_y="back" reflect_y="-1" coax_offset_y="${coax_back_y_offset}" prefix_x="left" reflect_x="1"/>
+  <xacro:leg prefix_y="back" reflect_y="-1" coax_offset_y="${coax_back_y_offset}" prefix_x="right" reflect_x="-1"/>
+</robot>

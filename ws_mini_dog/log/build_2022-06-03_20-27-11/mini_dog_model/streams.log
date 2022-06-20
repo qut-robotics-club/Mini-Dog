@@ -1,0 +1,5 @@
+[0.034s] Invoking command in '/home/cameron/Mini-Dog/ws_mini_dog/build/mini_dog_model': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/cameron/Mini-Dog/ws_mini_dog/build/mini_dog_model -- -j8 -l8
+[0.076s] CMake Error: The source directory "/home/cameron/ws_mini_dog/src/mini_dog_model" does not exist.
+[0.076s] Specify --help for usage, or press the help button on the CMake GUI.
+[0.077s] make: *** [Makefile:222: cmake_check_build_system] Error 1
+[0.115s] Invoked command in '/home/cameron/Mini-Dog/ws_mini_dog/build/mini_dog_model' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/galactic /usr/bin/cmake --build /home/cameron/Mini-Dog/ws_mini_dog/build/mini_dog_model -- -j8 -l8

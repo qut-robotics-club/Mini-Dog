@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<robot name="visual">
+
+  <material name="blue">
+    <color rgba="0 0 0.8 1"/>
+  </material>
+  <material name="black">
+    <color rgba="0 0 0 1"/>
+  </material>
+  <material name="white">
+    <color rgba="1 1 1 1"/>
+  </material>
+
+  <link name="body">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://mini_dog_model/meshes/NOVA_SM3_BODY.stl"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+  </link>
+
+  <joint name="body_to_left_coax" type="continuous">
+    <parent link="body"/>
+    <child link="left_coax"/>
+    <origin xyz="1.40380628885496 -5.85830014656488	2.46921476091603"/>
+    <axis xyz="1 0 0"/>
+  </joint>
+
+  <link name="left_coax">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://mini_dog_model/meshes/NOVA_SM3_LEFT_COAX.stl"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+  <joint name="left_coax_to_left_femur" type="continuous">
+    <parent link="left_coax"/>
+    <child link="left_femur"/>
+    <origin xyz="1.03787235419847	0.879655749618321	-0.35136229251909"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <link name="left_femur">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://mini_dog_model/meshes/NOVA_SM3_LEFT_FEMUR.stl"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+  </link>
+
+  <joint name="left_femur_to_left_tibia" type="continuous">
+    <parent link="left_femur"/>
+    <child link="left_tibia"/>
+    <origin xyz="0.39354148213741	2.65000312488549	-2.78071932641221"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <link name="left_tibia">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://mini_dog_model/meshes/NOVA_SM3_LEFT_TIBIA.stl"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+  </link>
+
+</robot>
